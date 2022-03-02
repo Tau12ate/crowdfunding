@@ -215,14 +215,14 @@ if ($auth) {
 
                 <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/people.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/people.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/people.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/people.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/people.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/people.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/people.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/people.png" class="img-fluid" alt=""></div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -256,23 +256,23 @@ if ($auth) {
                         <div class="portfolio-info">
                             <h4>App 1</h4>
                             <p>App</p>
-                            <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+                            <a href="assets/img/portfolio/home.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
                             <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/home.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Web 3</h4>
                             <p>Web</p>
-                            <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a href="assets/img/portfolio/home.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
                             <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/home.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>App 2</h4>
                             <p>App</p>
@@ -282,7 +282,7 @@ if ($auth) {
                     </div>
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/home.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Card 2</h4>
                             <p>Card</p>
@@ -292,7 +292,7 @@ if ($auth) {
                     </div>
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/home.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Web 2</h4>
                             <p>Web</p>
@@ -302,7 +302,7 @@ if ($auth) {
                     </div>
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/home.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>App 3</h4>
                             <p>App</p>
@@ -312,7 +312,7 @@ if ($auth) {
                     </div>
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/home.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Card 1</h4>
                             <p>Card</p>
@@ -322,7 +322,7 @@ if ($auth) {
                     </div>
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/home.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Card 3</h4>
                             <p>Card</p>
@@ -332,7 +332,7 @@ if ($auth) {
                     </div>
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/home.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Web 3</h4>
                             <p>Web</p>
@@ -351,7 +351,7 @@ if ($auth) {
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
                     <h2>Testimonials</h2>
-                    <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+                    <p>Berisi testimoni dari mereka yang telah di bantu</p>
                 </div>
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -364,9 +364,9 @@ if ($auth) {
                                     Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                                     <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                                 </p>
-                                <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
+                                <img src="assets/img/te.png" class="testimonial-img" alt="">
+                                <h3>namma</h3>
+                                <h4> &amp; masyarkat</h4>
                             </div>
                         </div><!-- End testimonial item -->
 
@@ -377,9 +377,9 @@ if ($auth) {
                                     Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
                                     <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                                 </p>
-                                <img src="assets/img/testimonial-2.jpg" class="testimonial-img" alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
+                                <img src="assets/img/te.png" class="testimonial-img" alt="">
+                                <h3>nama</h3>
+                                <h4>masyarakat</h4>
                             </div>
                         </div><!-- End testimonial item -->
 
@@ -390,9 +390,9 @@ if ($auth) {
                                     Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                                     <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                                 </p>
-                                <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
+                                <img src="assets/img/te.png" class="testimonial-img" alt="">
+                                <h3>nama</h3>
+                                <h4>masyarakat</h4>
                             </div>
                         </div><!-- End testimonial item -->
 
@@ -403,9 +403,9 @@ if ($auth) {
                                     Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
                                     <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                                 </p>
-                                <img src="assets/img/testimonial-4.jpg" class="testimonial-img" alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
+                                <img src="assets/img/te.png" class="testimonial-img" alt="">
+                                <h3>nama</h3>
+                                <h4>masyarakat</h4>
                             </div>
                         </div><!-- End testimonial item -->
 
@@ -416,9 +416,9 @@ if ($auth) {
                                     Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
                                     <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                                 </p>
-                                <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
+                                <img src="assets/img/te.png" class="testimonial-img" alt="">
+                                <h3>nama</h3>
+                                <h4>masyarakat</h4>
                             </div>
                         </div><!-- End testimonial item -->
 
@@ -448,15 +448,15 @@ if ($auth) {
         <section id="team">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <h2>Our Team</h2>
+                    <h2>Dewan Pembina</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
-                            <div class="pic"><img src="assets/img/team-1.jpg" alt=""></div>
+                            <div class="pic"><img src="assets/img/te.png" alt=""></div>
                             <div class="details">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
+                                <h4>ikhsan iskandar</h4>
+                                <span>bupati jeneponto</span>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -469,10 +469,10 @@ if ($auth) {
 
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
-                            <div class="pic"><img src="assets/img/team-2.jpg" alt=""></div>
+                            <div class="pic"><img src="assets/img/te.png" alt=""></div>
                             <div class="details">
-                                <h4>Sarah Jhinson</h4>
-                                <span>Product Manager</span>
+                                <h4>paris yasir</h4>
+                                <span>wakil bupati</span>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -485,10 +485,10 @@ if ($auth) {
 
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
-                            <div class="pic"><img src="assets/img/team-3.jpg" alt=""></div>
+                            <div class="pic"><img src="assets/img/kadisper.jpg" alt=""></div>
                             <div class="details">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
+                                <h4>Alfian affandi</h4>
+                                <span>kadis perumahan</span>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -501,10 +501,10 @@ if ($auth) {
 
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
-                            <div class="pic"><img src="assets/img/team-4.jpg" alt=""></div>
+                            <div class="pic"><img src="assets/img/te.png" alt=""></div>
                             <div class="details">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
+                                <h4>pak</h4>
+                                <span>kadis P.U</span>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -523,7 +523,7 @@ if ($auth) {
         <section id="contact">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <h2>Contact Us</h2>
+                    <h2>Hubungi Kami</h2>
                     <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
                 </div>
 
@@ -533,7 +533,7 @@ if ($auth) {
                         <div class="contact-address">
                             <i class="bi bi-geo-alt"></i>
                             <h3>Address</h3>
-                            <address>A108 Adam Street, NY 535022, USA</address>
+                            <address>jl lanto dg pasewang Jeneponto</address>
                         </div>
                     </div>
 
@@ -541,7 +541,7 @@ if ($auth) {
                         <div class="contact-phone">
                             <i class="bi bi-phone"></i>
                             <h3>Phone Number</h3>
-                            <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+                            <p><a href="tel:+085215515xxx">+62 85 215 515 068</a></p>
                         </div>
                     </div>
 
