@@ -21,4 +21,14 @@ class Home extends BaseController
     {
         return view('page/index');
     }
+
+    public function services()
+    {
+        return view('page/services');
+    }
+
+    public function portfolio()
+    {
+        return view('page/portfolio');
+    }
 }
