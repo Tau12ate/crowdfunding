@@ -42,10 +42,10 @@
         </div>
 
         <div class="container mb-4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.2371220014793!2d119.74603791511288!3d-5.678824957787462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db936549dc81fcf%3A0xcf7843b358c5e0fa!2sDinas%20Perumahan%20Kawasan%20Permukiman%20Dan%20Pertanahan%20Jeneponto!5e0!3m2!1sen!2sid!4v1646386893752!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
-        <div class="container">
+        <!-- <div class="container">
             <div class="form">
                 <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                     <div class="row">
@@ -73,7 +73,7 @@
                 </form>
             </div>
 
-        </div>
+        </div> -->
     </section><!-- End Contact Section -->
 </main>
 <?= $this->endSection(); ?>
