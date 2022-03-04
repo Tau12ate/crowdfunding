@@ -114,8 +114,8 @@ if ($auth) {
         <div class="hero-content" data-aos="fade-up">
             <h2>saling <span>membantu</span><br>Mandiri</h2>
             <div>
-                <a href="#about" class="btn-get-started scrollto">pengenalan</a>
-                <a href="#portfolio" class="btn-projects scrollto">fokus program</a>
+                <a href="#about" class="btn-get-started scrollto">Latar Belakang</a>
+                <a href="#portfolio" class="btn-projects scrollto">Mari Donasi</a>
             </div>
         </div>
 
@@ -252,7 +252,7 @@ if ($auth) {
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/home.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>App 1</h4>
                             <p>App</p>
