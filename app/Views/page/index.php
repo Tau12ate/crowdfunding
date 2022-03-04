@@ -1,111 +1,55 @@
-<?php
+<?= $this->extend('page/templates'); ?>
 
-$auth = Session()->auth;
+<?= $this->section('page-content'); ?>
+<!-- ======= hero Section ======= -->
+<section id="hero">
 
-if ($auth) {
-    echo strlen($auth->id);
-    echo sprintf("Data akun anda<br>ID: %s<br>Nama: %s<br>Email: %s<br><img src=\"%s\">", $auth->id, $auth->name, $auth->email, $auth->picture);
-    echo "<br><a href=\"/logout\">Logout</a>";
-}
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>crowdfunding jeneponto</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- =======================================================
-  * Template Name: Reveal - v4.7.0
-  * Template URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body>
-
-    <!-- ======= Top Bar ======= -->
-    <!-- <section id="topbar" class="d-flex align-items-center">
-        <div class="container d-flex justify-content-center justify-content-md-between">
-            <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-                <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-            </div>
-            <div class="social-links d-none d-md-flex align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-            </div>
+    <div class="hero-content" data-aos="fade-up">
+        <h2>saling <span>membantu</span><br>Mandiri</h2>
+        <div>
+            <a href="#about" class="btn-get-started scrollto">pengenalan</a>
+            <a href="#portfolio" class="btn-projects scrollto">fokus program</a>
         </div>
-    </section> -->
-    <!-- End Top Bar-->
+    </div>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="d-flex align-items-center">
-        <div class="container d-flex justify-content-between">
+    <div class="hero-slider swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('<?= base_url(); ?>/assets/img/hero-carousel/6.jpg');"></div>
+            <div class="swiper-slide" style="background-image: url('<?= base_url(); ?>/assets/img/hero-carousel/7.jpg');"></div>
+            <div class="swiper-slide" style="background-image: url('<?= base_url(); ?>/assets/img/hero-carousel/8.jpg');"></div>
+            <div class="swiper-slide" style="background-image: url('<?= base_url(); ?>/assets/img/hero-carousel/9.jpg');"></div>
+            <div class="swiper-slide" style="background-image: url('<?= base_url(); ?>/assets/img/hero-carousel/10.jpg');"></div>
+        </div>
+    </div>
 
-            <div id="logo">
-                <h1><a href="index.html">Assipaka<span>tau</span></a></h1>
-                <!-- Uncomment below if you prefer to use an image logo -->
-                <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
+</section><!-- End Hero Section -->
+
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-6 about-img">
+                    <img src="<?= base_url(); ?>/assets/img/about-img.jpg" alt="">
+                </div>
+
+                <div class="col-lg-6 content">
+                    <h2>pengenalan urungan dana assipakkatau</h2>
+                    <h3>website ini muncul karena keprihatinan yang muncul dengan banyaknya rumah tidak layak huni di kab. Jeneponto
+                        yang tidak bisa dibantu oleh pemerintah karena tidak terpenuhinya syarat-syarat administrasi</h3>
+
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> membantu mereka yang sangat membutuhkan</li>
+                        <li><i class="bi bi-check-circle"></i> survey kelayakan telah dilakukan oleh tim dibantu dengan dinas terkait</li>
+                        <li><i class="bi bi-check-circle"></i> sumber dana bisa berasal dari siapa saja baik perseorangan maupun organisasi</li>
+                    </ul>
+
+                </div>
             </div>
-
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">Latar Belakang</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Penggalangan Dana</a></li>
-                    <li><a class="nav-link scrollto " href="#portfolio">Penerima Bantuan</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                        </ul>
-                    </li> -->
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
 
         </div>
+<<<<<<< HEAD
     </header><!-- End Header -->
 
     <!-- ======= hero Section ======= -->
@@ -627,3 +571,8 @@ if ($auth) {
 </body>
 
 </html>
+=======
+    </section><!-- End About Section -->
+</main>
+<?= $this->endSection(); ?>
+>>>>>>> 1dcf4779a299781a0b4102363b243d4a3ec84061

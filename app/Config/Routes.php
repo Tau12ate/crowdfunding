@@ -35,6 +35,14 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::page');
 $routes->get('login', 'Redirect::index');
 
+$routes->get('page', 'Home::page');
+$routes->get('services', 'Home::services');
+$routes->get('campaigns', 'Home::campaigns');
+$routes->get('team', 'Home::team');
+$routes->get('contact', 'Home::contact');
+
+$routes->get('campaigns/(:any)', 'Campaigns::detail/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
