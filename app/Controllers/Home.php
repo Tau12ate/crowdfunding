@@ -19,16 +19,39 @@ class Home extends BaseController
 
     public function page()
     {
-        return view('page/index');
+        $data = [
+            'nav_active' => 'page'
+        ];
+        return view('page/index', $data);
     }
 
     public function services()
     {
-        return view('page/services');
+        $data = [
+            'nav_active' => 'services'
+        ];
+        return view('page/services', $data);
     }
 
-    public function portfolio()
+    public function campaigns()
     {
-        return view('page/portfolio');
+        $data = [
+            'nav_active' => 'campaigns'
+        ];
+        return view('page/campaigns', $data);
+    }
+    public function team()
+    {
+        $data = [
+            'nav_active' => 'team'
+        ];
+        return view('page/team', $data);
+    }
+    public function contact()
+    {
+        $data = [
+            'nav_active' => 'contact'
+        ];
+        return view('page/contact', $data);
     }
 }

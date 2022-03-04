@@ -1,9 +1,3 @@
-/**
-* Template Name: Reveal - v4.7.0
-* Template URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -43,7 +37,21 @@
   /**
    * Navbar links active state on scroll
    */
-  let navbarlinks = select('#navbar .scrollto', true)
+  let navActive = document.getElementById('nav-active')
+  let navbarlinks = document.querySelectorAll('.scrollto')
+  navbarlinks.forEach(navbarlink => {
+    
+      let href = navbarlink.getAttribute('href')
+      var last = href.substring(href.lastIndexOf("/") + 1, href.length);
+      
+      if (navActive.innerHTML == last) {
+        navbarlink.classList.add('active')
+      } else {
+        navbarlink.classList.remove('active')
+      }
+    
+  })
+
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
     navbarlinks.forEach(navbarlink => {

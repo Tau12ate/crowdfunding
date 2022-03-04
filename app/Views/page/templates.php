@@ -27,32 +27,9 @@
     <!-- Template Main CSS File -->
     <link href="<?= base_url(); ?>/assets/css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: Reveal - v4.7.0
-  * Template URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
-
-    <!-- ======= Top Bar ======= -->
-    <!-- <section id="topbar" class="d-flex align-items-center">
-        <div class="container d-flex justify-content-center justify-content-md-between">
-            <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-                <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-            </div>
-            <div class="social-links d-none d-md-flex align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-            </div>
-        </div>
-    </section> -->
-    <!-- End Top Bar-->
 
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex align-items-center">
@@ -66,10 +43,11 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="/home/page">Latar Belakang</a></li>
-                    <li><a class="nav-link scrollto" href="/home/services">Penggalangan Dana</a></li>
-                    <li><a class="nav-link scrollto " href="/home/portfolio">Penerima Bantuan</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                    <li id="nav-active" hidden><?= $nav_active; ?></li>
+                    <li><a class="nav-link scrollto" href="/page">Latar Belakang</a></li>
+                    <li><a class="nav-link scrollto" href="/services">Penggalangan Dana</a></li>
+                    <li><a class="nav-link scrollto " href="/campaigns">Penerima Bantuan</a></li>
+                    <li><a class="nav-link scrollto" href="/team">Team</a></li>
                     <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="#">Drop Down 1</a></li>
@@ -87,7 +65,7 @@
                             <li><a href="#">Drop Down 4</a></li>
                         </ul>
                     </li> -->
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -105,12 +83,6 @@
                 &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
             </div>
             <div class="credits">
-                <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
-      -->
                 Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
             </div>
         </div>
