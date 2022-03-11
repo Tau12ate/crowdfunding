@@ -41,6 +41,9 @@ $routes->get('campaigns', 'Home::campaigns');
 $routes->get('team', 'Home::team');
 $routes->get('contact', 'Home::contact');
 
+$routes->get('campaigns/coba', 'Campaigns::coba');
+$routes->get('campaigns/donasiamount/(:any)', 'Campaigns::donasiamount/$1');
+$routes->get('campaigns/donasi/(:any)', 'Campaigns::donasi/$1');
 $routes->get('campaigns/(:any)', 'Campaigns::detail/$1');
 
 /*

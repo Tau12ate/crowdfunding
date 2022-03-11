@@ -83,6 +83,23 @@
   }
 
   /**
+   * donation amount
+   */
+  
+  let listDonation = document.querySelectorAll('.list-donasi')
+  let jumlahDonasi = document.getElementById('jumlah-donasi')
+  
+
+  listDonation.forEach(list => {
+    list.addEventListener('click', (el)=> {
+      
+      el.preventDefault()
+      jumlahDonasi.value = list.innerHTML
+      jumlahDonasi.focus()
+    })
+   })
+
+  /**
    * Header fixed top on scroll
    */
   let selectHeader = select('#header')
@@ -108,7 +125,7 @@
   let backtotop = select('.back-to-top')
   if (backtotop) {
     const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 400) {
         backtotop.classList.add('active')
       } else {
         backtotop.classList.remove('active')

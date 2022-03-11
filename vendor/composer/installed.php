@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '3a76bfdcf0e22091b2a7319ec082f367ad6be367',
+        'reference' => '51520686a90e4bc8bcae060891d34aef08f5c710',
         'name' => 'codeigniter4/appstarter',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '3a76bfdcf0e22091b2a7319ec082f367ad6be367',
+            'reference' => '51520686a90e4bc8bcae060891d34aef08f5c710',
             'dev_requirement' => false,
         ),
         'codeigniter4/framework' => array(
@@ -134,6 +134,15 @@
             'install_path' => __DIR__ . '/../laminas/laminas-escaper',
             'aliases' => array(),
             'reference' => '891ad70986729e20ed2e86355fcf93c9dc238a5f',
+            'dev_requirement' => false,
+        ),
+        'midtrans/midtrans-php' => array(
+            'pretty_version' => '2.5.2',
+            'version' => '2.5.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../midtrans/midtrans-php',
+            'aliases' => array(),
+            'reference' => 'a1ad0c824449ca8c68c4cf11b3417ad518311d2b',
             'dev_requirement' => false,
         ),
         'mikey179/vfsstream' => array(

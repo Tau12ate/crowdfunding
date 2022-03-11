@@ -60,6 +60,19 @@ h6 {
   height: 40px;
   transition: all 0.4s;
 }
+a.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  bottom: 15px;
+  z-index: 996;
+  background: #50d8af;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  padding-top: 27px;
+  transition: all 0.4s;
+}
 .back-to-top i {
   font-size: 28px;
   color: #fff;
@@ -749,6 +762,24 @@ section {
   padding-bottom: 1px;
   color: #fff;
 }
+#portfolio .progress {
+  height: 6px;
+  overflow: visible;
+  margin-bottom: 10px;
+}
+
+#portfolio .progress .progress-bar {
+  position: relative;
+}
+
+.progress .progress-bar {
+  height: 100%;
+  color: inherit;
+}
+
+.bg-progress-bar {
+  background: #036155;
+}
 #portfolio .portfolio-item .portfolio-info .preview-link,
 #portfolio .portfolio-item .portfolio-info .details-link {
   position: absolute;
@@ -806,6 +837,35 @@ section {
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
+.portfolio-details .portfolio-info .donasi {
+  background-color: rgb(250, 250, 250);
+}
+.comments {
+  margin-top: 1%;
+  margin-left: 10px;
+}
+.comment {
+  float: left;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+.comment h4,
+.comment h3,
+.comment span,
+.darker h4,
+.darker span {
+  display: inline;
+}
+
+.comment p,
+.comment span,
+.darker p,
+.darker span {
+  color: rgb(184, 183, 183);
+}
 .portfolio-details .portfolio-info .detail-progress {
   font-size: 11px;
   margin-bottom: 0;
@@ -860,12 +920,27 @@ section {
   min-height: 350px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
 }
+.testimonial-item {
+  box-sizing: content-box;
+  padding: 10px 10px 10px 10px;
+  margin: 30px 15px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+}
 @media (max-width: 767px) {
   #testimonials .testimonial-item {
     margin: 30px 10px;
   }
+  .testimonial-item {
+    margin: 30px 10px;
+  }
 }
 #testimonials .testimonial-item .testimonial-img {
+  width: 90px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin: 0 auto;
+}
+.testimonial-item .testimonial-img {
   width: 90px;
   border-radius: 50%;
   border: 4px solid #fff;
@@ -877,7 +952,18 @@ section {
   margin: 10px 0 5px 0;
   color: #111;
 }
+.testimonial-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #111;
+}
 #testimonials .testimonial-item h4 {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+.testimonial-item h4 {
   font-size: 14px;
   color: #999;
   margin: 0;
@@ -896,6 +982,10 @@ section {
   width: 37px;
 }
 #testimonials .testimonial-item p {
+  font-style: italic;
+  margin: 0 auto 15px auto;
+}
+.testimonial-item p {
   font-style: italic;
   margin: 0 auto 15px auto;
 }

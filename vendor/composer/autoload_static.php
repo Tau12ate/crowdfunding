@@ -52,6 +52,7 @@ class ComposerStaticInit1246e428cda28ed5f633a61d4b46bb07
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Midtrans\\' => 9,
         ),
         'L' => 
         array (
@@ -145,6 +146,10 @@ class ComposerStaticInit1246e428cda28ed5f633a61d4b46bb07
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Midtrans\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/midtrans/midtrans-php/Midtrans',
         ),
         'Laminas\\Escaper\\' => 
         array (

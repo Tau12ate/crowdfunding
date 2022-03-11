@@ -18,12 +18,12 @@
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <img src="<?= base_url(); ?>/assets/img/portfolio/home.jpg" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <a href="/campaigns/detail" title="More Details">
+                        <a href="/campaigns/slug-donasi" title="More Details">
                             <h4>Judul Donasi</h4>
                         </a>
-                        <h6 class="detail-progress"><span>Rp. 17.000.000</span> terkumpul dari Rp 20.000.000</h6>
+                        <h6 class="detail-progress">Total kebutuhan dana <span>Rp 20.000.000</span></h6>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-progress-bar" style="width:25%"></div>
                         </div>
                     </div>
                 </div>
