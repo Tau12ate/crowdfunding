@@ -83,21 +83,68 @@
   }
 
   /**
+   * donation method
+   */
+  let donationMethod = document.querySelectorAll('.donation-method');
+  let donationField = document.getElementById('donation-field');
+  let donationFieldUang = document.getElementById('donation-field-uang');
+  let donationFieldBarang = document.getElementById('donation-field-barang');
+  let slugDonation = document.getElementById('slug-donation');
+  
+  donationMethod.forEach(list => {
+    list.addEventListener('click', (el)=> {
+      
+      el.preventDefault();
+
+      if (list.getAttribute('data-method') == 'uang') {
+        donationFieldUang.hidden = false;
+        donationField.hidden = true;
+        donationFieldBarang.hidden = true;
+      };
+
+      if (list.getAttribute('data-method') == 'barang') {
+        
+      }
+      console.log(list.getAttribute('data-method'))
+    })
+   })
+
+   /**
+    * Back to donation methid
+    */
+    let backToMethod = document.querySelector('.back-to-method');
+    if (backToMethod) {
+      
+      backToMethod.addEventListener('click', ()=> {
+        donationField.hidden = false;
+        donationFieldUang.hidden = true;
+        donationFieldBarang.hidden = true;
+      })
+    }
+
+
+  /**
    * donation amount
    */
   
-  let listDonation = document.querySelectorAll('.list-donasi')
-  let jumlahDonasi = document.getElementById('jumlah-donasi')
-  
+    let listDonation = document.querySelectorAll('.list-donasi');
+    let jumlahDonasi = document.getElementById('jumlah-donasi');
+    listDonation.forEach(list => {
+      list.addEventListener('click', (el)=> {
+        
+        el.preventDefault();
+        jumlahDonasi.value = list.innerHTML;
+        jumlahDonasi.focus();
+      });
+    });
 
-  listDonation.forEach(list => {
-    list.addEventListener('click', (el)=> {
+    if (jumlahDonasi) {
       
-      el.preventDefault()
-      jumlahDonasi.value = list.innerHTML
-      jumlahDonasi.focus()
-    })
-   })
+      jumlahDonasi.addEventListener('keyup', ()=> {
+      jumlahDonasi.value = formatRupiah(jumlahDonasi.value, 'Rp. ');
+  
+    });
+    }
 
   /**
    * Header fixed top on scroll
@@ -327,5 +374,25 @@
       mirror: false
     })
   });
+
+  /* Fungsi Rupiah */
+  function formatRupiah(angka, prefix)
+  {
+      var number_string = angka.replace(/[^,\d]/g, '').toString(),
+          split    = number_string.split(','),
+          sisa     = split[0].length % 3,
+          rupiah     = split[0].substr(0, sisa),
+          ribuan     = split[0].substr(sisa).match(/\d{3}/gi),
+          separator;
+          
+      if (ribuan) {
+          separator = sisa ? '.' : '';
+          rupiah += separator + ribuan.join('.');
+      }
+      
+      rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+      return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+  }
+
 
 })()

@@ -30,51 +30,39 @@
 
                         <div class="auto-form-wrapper">
 
-                            <h2 class="">Antamaballaki Login</h2>
-                            <hr>
+                            <h2 class="">Antamaballaki Registration</h2>
+                            <br>
                             <?= view('Myth\Auth\Views\_message_block') ?>
 
-                            <form action="<?= route_to('login') ?>" method="post">
+                            <form action="<?= route_to('register') ?>" method="post">
                                 <?= csrf_field(); ?>
 
                                 <div class="form-group">
-                                    <label for="login"><?= lang('Auth.emailOrUsername') ?></label>
-                                    <input type="text" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.emailOrUsername') ?>">
-                                    <div class="invalid-feedback">
-                                        <?= session('errors.login') ?>
-                                    </div>
+                                    <label for="email"><?= lang('Auth.email') ?></label>
+                                    <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" aria-describedby="emailHelp" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>">
+                                    <small id="emailHelp" class="form-text text-muted"><?= lang('Auth.weNeverShare') ?></small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="username"><?= lang('Auth.username') ?></label>
+                                    <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?= lang('Auth.username') ?>" value="<?= old('username') ?>">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="password"><?= lang('Auth.password') ?></label>
-                                    <input type="password" name="password" class="form-control  <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>">
-                                    <div class="invalid-feedback">
-                                        <?= session('errors.password') ?>
-                                    </div>
+                                    <input type="password" name="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>" autocomplete="off">
                                 </div>
 
                                 <div class="form-group">
-
-                                    <button type="submit" class="btn btn-primary btn-block"><?= lang('Auth.loginAction') ?></button>
-
+                                    <label for="pass_confirm"><?= lang('Auth.repeatPassword') ?></label>
+                                    <input type="password" name="pass_confirm" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.repeatPassword') ?>" autocomplete="off">
                                 </div>
 
-                                <!-- <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block"><?= lang('Auth.loginAction') ?></button>
-                                    </div>
-                                <div class="form-group d-flex justify-content-center">
-                                    <a href="#" class="text-small forgot-password text-black">-- Atau --</a>
-                                </div>
+                                <br>
                                 <div class="form-group">
-                                    <a href="#" class="btn btn-block g-login"><img class="mr-3" src="../assets/login/images/file-icons/icon-google.svg" alt="">Login dengan Google</a>
-                                </div> -->
+                                    <button type="submit" class="btn btn-primary btn-block"><?= lang('Auth.register') ?></button>
+                                </div>
                             </form>
-
-                            <hr>
-
-                            <?php if ($config->allowRegistration) : ?>
-                                <p><a href="<?= route_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a></p>
-                            <?php endif; ?>
 
                         </div>
 

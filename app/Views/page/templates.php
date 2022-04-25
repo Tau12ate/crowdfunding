@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>crowdfunding jeneponto</title>
+    <title>ANTAMABALLAKI</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -36,7 +36,7 @@
         <div class="container d-flex justify-content-between">
 
             <div id="logo">
-                <h1><a href="index.html">Assipaka<span>tau</span></a></h1>
+                <h1><a href="/">ANTAMABALLA<span>KI</span></a></h1>
             </div>
 
             <nav id="navbar" class="navbar">
@@ -47,6 +47,9 @@
                     <li><a class="nav-link scrollto" href="/services">Bantuan Tersalur</a></li>
                     <li><a class="nav-link scrollto" href="/team">Team</a></li>
                     <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
+                    <?php if (logged_in()) : ?>
+                        <li><a class="nav-link scrollto" href="/dashboard">Dashboard</a></li>
+                    <?php endif; ?>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->

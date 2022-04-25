@@ -31,16 +31,16 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-// $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::page');
-$routes->get('login', 'Redirect::index');
 
+// page route
 $routes->get('page', 'Home::page');
 $routes->get('services', 'Home::services');
 $routes->get('campaigns', 'Home::campaigns');
 $routes->get('team', 'Home::team');
 $routes->get('contact', 'Home::contact');
 
+// campaigns route
 $routes->get('campaigns/coba', 'Campaigns::coba');
 $routes->get('campaigns/donasiamount/(:any)', 'Campaigns::donasiamount/$1');
 $routes->get('campaigns/donasi/(:any)', 'Campaigns::donasi/$1');
