@@ -33,6 +33,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::page');
 
+// api donasi
+$routes->resource('donasi');
+
 // page route
 $routes->get('page', 'Home::page');
 $routes->get('services', 'Home::services');
@@ -44,6 +47,8 @@ $routes->get('contact', 'Home::contact');
 $routes->get('campaigns/coba', 'Campaigns::coba');
 $routes->get('campaigns/donasiamount/(:any)', 'Campaigns::donasiamount/$1');
 $routes->get('campaigns/donasi/(:any)', 'Campaigns::donasi/$1');
+$routes->get('campaigns/charge/(:any)', 'Campaigns::charge/$1');
+$routes->get('campaigns/test', 'Campaigns::test');
 $routes->get('campaigns/(:any)', 'Campaigns::detail/$1');
 
 /*

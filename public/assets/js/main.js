@@ -2,6 +2,13 @@
   "use strict";
 
   /**
+   * Loader
+   */
+   window.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("loader").classList.remove("loading");
+  });
+
+  /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {
@@ -129,6 +136,8 @@
   
     let listDonation = document.querySelectorAll('.list-donasi');
     let jumlahDonasi = document.getElementById('jumlah-donasi');
+    let btnDonasi = document.getElementById('btn-donasi');
+    let namaDonatur = document.getElementById('nama');
     listDonation.forEach(list => {
       list.addEventListener('click', (el)=> {
         
@@ -143,7 +152,16 @@
       jumlahDonasi.addEventListener('keyup', ()=> {
       jumlahDonasi.value = formatRupiah(jumlahDonasi.value, 'Rp. ');
   
-    });
+      });
+
+      namaDonatur.addEventListener('focus', ()=> {
+        
+        if (parseInt(jumlahDonasi.value.replace(/[^,\d]/g, '')) < 30000) {
+          alert('Minimal donasi Rp. 30.000');
+          jumlahDonasi.focus();
+        }
+        
+      });
     }
 
   /**

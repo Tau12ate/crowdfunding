@@ -9,8 +9,8 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
-    <!-- <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-yygcACpYsV_my5n6"></script> -->
-    <script type="text/javascript" src="https://app.midtrans.com/snap/snap.js" data-client-key="Mid-client-QFXv_zkT-5V9uaaW"></script>
+    <!-- <script type="text/javascript" src="https://app.midtrans.com/snap/snap.js" data-client-key="Mid-client-jiahGN-6inE6Fqrv"></script> -->
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-8gQGzsaZwsRGPcGd"></script>
     <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
 
     <!-- Favicons -->
@@ -34,33 +34,80 @@
 </head>
 
 <body>
+
+    <!-- ======= Loader ======= -->
+    <div id="loader" class="loading">Loading&#8230;</div>
+
     <!-- get snatoken -->
     <input id="order-id" type="hidden" value="<?= $snapToken; ?>">
+    <input id="slug" type="hidden" value="<?= $slug; ?>">
+    <!-- get campaign detail -->
+    <input id="campaign_id" type="hidden" value="<?= $campaign_id; ?>">
+    <input id="gross_amount" type="hidden" value="<?= $gross_amount; ?>">
+    <input id="donatur_name" type="hidden" value="<?= $donatur_name; ?>">
+    <input id="donatur_email" type="hidden" value="<?= $donatur_email; ?>">
+    <input id="donatur_phone" type="hidden" value="<?= $donatur_phone; ?>">
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         // For example trigger on button clicked, or any time you need
         var payButton = document.getElementById('pay-button');
         var orderId = document.getElementById('order-id');
+        var slug = document.getElementById('slug').value;
+        var campaign_id = document.getElementById('campaign_id').value;
+        var gross_amount = document.getElementById('gross_amount').value;
+        var donatur_name = document.getElementById('donatur_name').value;
+        var donatur_email = document.getElementById('donatur_email').value;
+        var donatur_phone = document.getElementById('donatur_phone').value;
 
         // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
         window.snap.pay(orderId.value, {
+
             onSuccess: function(result) {
                 /* You may add your own implementation here */
+                console.log(result);
                 alert("payment success!");
                 window.location = "<?= base_url(); ?>/campaigns";
-                console.log(result);
             },
             onPending: function(result) {
                 /* You may add your own implementation here */
+                // console.log(result);
                 alert("wating your payment!");
-                window.location = "<?= base_url(); ?>/campaigns";
-                console.log(result);
+
+                var orderId = result.order_id;
+                var donasi_status = result.transaction_status;
+                var payment_type = result.payment_type;
+
+                $.ajax({
+                    url: '<?= base_url(); ?>/campaigns/test',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        orderId: orderId,
+                        slug: slug,
+                        campaign_id: campaign_id,
+                        gross_amount: gross_amount,
+                        donatur_name: donatur_name,
+                        donatur_email: donatur_email,
+                        donatur_phone: donatur_phone,
+                        donasi_status: donasi_status,
+                        payment_type: payment_type,
+                    },
+
+                    success: function(data) {
+                        console.log(data);
+                    }
+                });
+
+                // window.location = "<?= base_url(); ?>/campaigns/charge/" + slug;
+
             },
             onError: function(result) {
                 /* You may add your own implementation here */
+                console.log(result);
                 alert("payment failed!");
                 window.location = "<?= base_url(); ?>/campaigns";
-                console.log(result);
             },
             onClose: function() {
                 /* You may add your own implementation here */

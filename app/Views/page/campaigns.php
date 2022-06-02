@@ -15,18 +15,22 @@
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <img src="<?= base_url(); ?>/assets/img/portfolio/home.jpg" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <a href="/campaigns/slug-donasi" title="More Details">
-                            <h4>Judul Donasi</h4>
-                        </a>
-                        <h6 class="detail-progress">Total kebutuhan dana <span>Rp 20.000.000</span></h6>
-                        <div class="progress">
-                            <div class="progress-bar bg-progress-bar" style="width:25%"></div>
+                <?php foreach ($campaigns as $campaign) : ?>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="<?= base_url(); ?>/assets/img/campaigns/<?= $campaign['img1'] ?>" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="/campaigns/<?= $campaign['slug'] ?>" title="More Details">
+                                <h4><?= $campaign['nama'] ?></h4>
+                            </a>
+                            <h6 class="detail-progress">Total kebutuhan dana <span><?= "Rp " . number_format($campaign['kebutuhan'], 0, ',', '.'); ?></span></h6>
+                            <div class="progress">
+                                <div class="progress-bar bg-progress-bar" style="width:55%"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                <?php endforeach ?>
 
             </div>
 

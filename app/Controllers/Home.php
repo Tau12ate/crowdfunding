@@ -2,8 +2,17 @@
 
 namespace App\Controllers;
 
+use App\Models\CampaignsModel;
+
 class Home extends BaseController
 {
+    protected $campaignsModel;
+
+    public function __construct()
+    {
+        $this->campaignsModel = new CampaignsModel();
+    }
+
     public function index()
     {
         // return view('welcome_message');
@@ -35,9 +44,12 @@ class Home extends BaseController
 
     public function campaigns()
     {
+        
         $data = [
-            'nav_active' => 'campaigns'
+            'nav_active' => 'campaigns',
+            'campaigns' => $this->campaignsModel->findAll(),
         ];
+        
         return view('page/campaigns', $data);
     }
     public function team()

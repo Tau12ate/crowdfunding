@@ -30,6 +30,9 @@
 </head>
 
 <body>
+    <!-- ======= Loader ======= -->
+    <div id="loader" class="loading">Loading&#8230;</div>
+
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex align-items-center">
         <div class="container d-flex justify-content-center">
@@ -48,7 +51,7 @@
             <div class="row" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-12 d-flex justify-content-center">
                     <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="<?= base_url(); ?>/assets/img/testimonial-1.jpg" alt="Card image cap" width="40">
+                        <img class="card-img-top" src="<?= base_url(); ?>/assets/img/campaigns/<?= $campaign['img1'] ?>" alt="Card image cap" width="40">
                         <div id="donation-field" class="card-body">
                             <p class="card-text">Silakan pilih metode donasi</p>
                             <div class="row">
@@ -73,6 +76,8 @@
                                                             </div>
 
                                                             <form action="/campaigns/donasiamount/<?= $slug; ?>" method="post">
+                                                                <input type="hidden" name="campaign" value="<?= $campaign['nama'] ?>">
+                                                                <input type="hidden" name="campaign-id" value="<?= $campaign['id'] ?>">
                                                                 <div class="row">
                                                                     <label for="" class="mt-3">Jumlah Donasi</label>
                                                                     <div class="input-group mb-3">
@@ -209,8 +214,40 @@
     <script src="<?= base_url(); ?>/assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="<?= base_url(); ?>/assets/vendor/php-email-form/validate.js"></script>
 
+    <!-- jQuery -->
+    <script src="<?= base_url(); ?>/assets/js/jquery-3.6.0.js"></script>
+    <!-- sweetalert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
     <!-- Template Main JS File -->
     <script src="<?= base_url(); ?>/assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            Swal.fire({
+                title: 'Transaksi ini menggunakan biaya admin!',
+                html: `<h6>Biaya tergantung dari metode pembayaran:</h6>
+                        <ul class="list-group text-left">
+                            <li class="list-group-item">Transfer antar bank : Rp. 4.000</li>
+                            <li class="list-group-item">GoPay : 2%</li>
+                            <li class="list-group-item">QRIS : 0.7%</li>
+                            <li class="list-group-item">ShoopePay : 2%</li>
+                        </ul>`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Lanjutkan!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+
+                } else {
+                    window.history.go(-1);
+                    return false;
+                }
+            })
+        });
+    </script>
 
 </body>
 

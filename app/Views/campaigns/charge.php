@@ -1,13 +1,3 @@
-<?php
-
-function rupiah($angka)
-{
-
-    $hasil_rupiah = "Rp " . number_format($angka, 2, ',', '.');
-    return $hasil_rupiah;
-};
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +5,7 @@ function rupiah($angka)
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>ANTAMABALLAKI</title>
+    <title>crowdfunding jeneponto</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -40,38 +30,39 @@ function rupiah($angka)
 </head>
 
 <body>
-
     <!-- ======= Loader ======= -->
     <div id="loader" class="loading">Loading&#8230;</div>
 
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex align-items-center">
-        <div class="container d-flex justify-content-between">
+        <div class="container d-flex justify-content-center">
 
             <div id="logo">
-                <h1><a href="/">ANTAMABALLA<span>KI</span></a></h1>
+                <h1><?= $slug; ?></h1>
             </div>
-
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li id="nav-active" hidden><?= $nav_active; ?></li>
-                    <li><a class="nav-link scrollto" href="/page">Latar Belakang</a></li>
-                    <li><a class="nav-link scrollto " href="/campaigns">Penerima Bantuan</a></li>
-                    <li><a class="nav-link scrollto" href="/services">Bantuan Tersalur</a></li>
-                    <li><a class="nav-link scrollto" href="/team">Team</a></li>
-                    <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
-                    <?php if (logged_in()) : ?>
-                        <li><a class="nav-link scrollto" href="/dashboard">Dashboard</a></li>
-                    <?php endif; ?>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
 
         </div>
     </header><!-- End Header -->
 
-    <!-- Begin Page Content -->
-    <?= $this->renderSection('page-content'); ?>
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="<?= base_url(); ?>/assets/img/pay.svg" alt="pay">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Terimakasih telah membantu kareng!</h5>
+                            <hr>
+                            <p class="card-text">Harap segera selesaikan pembayaran, setelah itu klik <strong>Konfirmasi pembayaran</strong> di bawah ini.</p>
+                            <a href="#" class="btn btn-primary">Konfirmasi pembayaran</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section><!-- End Portfolio Section -->
+
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -85,6 +76,7 @@ function rupiah($angka)
         </div>
     </footer><!-- End Footer -->
 
+    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
 
     <!-- Vendor JS Files -->
     <script src="<?= base_url(); ?>/assets/vendor/aos/aos.js"></script>
@@ -94,8 +86,23 @@ function rupiah($angka)
     <script src="<?= base_url(); ?>/assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="<?= base_url(); ?>/assets/vendor/php-email-form/validate.js"></script>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- sweetalert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
     <!-- Template Main JS File -->
     <script src="<?= base_url(); ?>/assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            Swal.fire(
+                'Terimakasih telah membantu kareng',
+                'Harap segera selesaikan pembayaran!',
+                'success'
+            )
+        });
+    </script>
 
 </body>
 

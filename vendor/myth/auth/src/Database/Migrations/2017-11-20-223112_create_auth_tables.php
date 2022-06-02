@@ -1,4 +1,6 @@
-<?php namespace Myth\Auth\Database\Migrations;
+<?php
+
+namespace Myth\Auth\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
@@ -160,13 +162,59 @@ class CreateAuthTables extends Migration
         $this->forge->addForeignKey('user_id', 'users', 'id', '', 'CASCADE');
         $this->forge->addForeignKey('permission_id', 'auth_permissions', 'id', '', 'CASCADE');
         $this->forge->createTable('auth_users_permissions', true);
+
+        /*
+        * Create table campaigns
+        */
+        $this->forge->addField([
+            'id'               => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'nama'            => ['type' => 'varchar', 'constraint' => 255],
+            'slug'            => ['type' => 'varchar', 'constraint' => 255],
+            'alamat'            => ['type' => 'varchar', 'constraint' => 255],
+            'deskripsi1'            => ['type' => 'text'],
+            'deskripsi2'            => ['type' => 'text'],
+            'kebutuhan'            => ['type' => 'int'],
+            'img1'         => ['type' => 'varchar', 'constraint' => 30],
+            'img2'         => ['type' => 'varchar', 'constraint' => 30],
+            'img3'         => ['type' => 'varchar', 'constraint' => 30],
+            'active'           => ['type' => 'tinyint', 'constraint' => 1, 'default' => 1],
+            'created_at'       => ['type' => 'datetime', 'null' => true],
+            'updated_at'       => ['type' => 'datetime', 'null' => true],
+            'deleted_at'       => ['type' => 'datetime', 'null' => true],
+        ]);
+
+        $this->forge->addKey('id', true);
+        $this->forge->addUniqueKey('slug');
+
+        $this->forge->createTable('campaigns', true);
+
+        /*
+        * Create table donasi
+        */
+        $this->forge->addField([
+            'id'               => ['type' => 'int', 'constraint' => 11],
+            'campaign_id'               => ['type' => 'int', 'constraint' => 11],
+            'gross_amount'            => ['type' => 'long'],
+            'donatur_name'            => ['type' => 'varchar', 'constraint' => 255],
+            'donatur_email'            => ['type' => 'varchar', 'constraint' => 255],
+            'donatur_phone'            => ['type' => 'text'],
+            'status'           => ['type' => 'varchar', 'constraint' => 25],
+            'payment_type'           => ['type' => 'varchar', 'constraint' => 25],
+            'created_at'       => ['type' => 'datetime', 'null' => true],
+            'updated_at'       => ['type' => 'datetime', 'null' => true],
+            'deleted_at'       => ['type' => 'datetime', 'null' => true],
+        ]);
+
+        $this->forge->addKey('id', true);
+
+        $this->forge->createTable('donasi', true);
     }
 
     //--------------------------------------------------------------------
 
     public function down()
     {
-		// drop constraints first to prevent errors
+        // drop constraints first to prevent errors
         if ($this->db->DBDriver != 'SQLite3') // @phpstan-ignore-line
         {
             $this->forge->dropForeignKey('auth_tokens', 'auth_tokens_user_id_foreign');
@@ -178,15 +226,16 @@ class CreateAuthTables extends Migration
             $this->forge->dropForeignKey('auth_users_permissions', 'auth_users_permissions_permission_id_foreign');
         }
 
-		$this->forge->dropTable('users', true);
-		$this->forge->dropTable('auth_logins', true);
-		$this->forge->dropTable('auth_tokens', true);
-		$this->forge->dropTable('auth_reset_attempts', true);
+        $this->forge->dropTable('users', true);
+        $this->forge->dropTable('auth_logins', true);
+        $this->forge->dropTable('auth_tokens', true);
+        $this->forge->dropTable('auth_reset_attempts', true);
         $this->forge->dropTable('auth_activation_attempts', true);
-		$this->forge->dropTable('auth_groups', true);
-		$this->forge->dropTable('auth_permissions', true);
-		$this->forge->dropTable('auth_groups_permissions', true);
-		$this->forge->dropTable('auth_groups_users', true);
-		$this->forge->dropTable('auth_users_permissions', true);
+        $this->forge->dropTable('auth_groups', true);
+        $this->forge->dropTable('auth_permissions', true);
+        $this->forge->dropTable('auth_groups_permissions', true);
+        $this->forge->dropTable('auth_groups_users', true);
+        $this->forge->dropTable('auth_users_permissions', true);
+        $this->forge->dropTable('campaigns', true);
     }
 }
