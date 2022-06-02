@@ -75,32 +75,32 @@
                 // console.log(result);
                 alert("wating your payment!");
 
-                var orderId = result.order_id;
-                var donasi_status = result.transaction_status;
-                var payment_type = result.payment_type;
+                // var orderId = result.order_id;
+                // var donasi_status = result.transaction_status;
+                // var payment_type = result.payment_type;
 
-                $.ajax({
-                    url: '<?= base_url(); ?>/campaigns/test',
-                    type: 'post',
-                    dataType: 'json',
-                    data: {
-                        orderId: orderId,
-                        slug: slug,
-                        campaign_id: campaign_id,
-                        gross_amount: gross_amount,
-                        donatur_name: donatur_name,
-                        donatur_email: donatur_email,
-                        donatur_phone: donatur_phone,
-                        donasi_status: donasi_status,
-                        payment_type: payment_type,
-                    },
+                // $.ajax({
+                //     url: '<?= base_url(); ?>/campaigns/test',
+                //     type: 'post',
+                //     dataType: 'json',
+                //     data: {
+                //         orderId: orderId,
+                //         slug: slug,
+                //         campaign_id: campaign_id,
+                //         gross_amount: gross_amount,
+                //         donatur_name: donatur_name,
+                //         donatur_email: donatur_email,
+                //         donatur_phone: donatur_phone,
+                //         donasi_status: donasi_status,
+                //         payment_type: payment_type,
+                //     },
 
-                    success: function(data) {
-                        console.log(data);
-                    }
-                });
+                //     success: function(data) {
+                //         console.log(data);
+                //     }
+                // });
 
-                // window.location = "<?= base_url(); ?>/campaigns/charge/" + slug;
+                window.location = "<?= base_url(); ?>/campaigns/charge/" + slug;
 
             },
             onError: function(result) {

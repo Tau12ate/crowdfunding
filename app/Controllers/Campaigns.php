@@ -125,7 +125,7 @@ class Campaigns extends BaseController
         // ];
         // echo json_encode($data);
         helper(['form', 'url']);
-        $insert = $this->Book_model->book_add($data);
+        // $insert = $this->Book_model->book_add($data);
         echo json_encode(array("status" => TRUE));
         $result = $this->donasiModel->save([
             'campaign_id' => $this->request->getVar('campaign_id'),
